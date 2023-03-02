@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+   <h1>Creating JavaScript Objects</h1> 
+   <p id="demo"></p>
+
+   <!-- <button id="click me">Click Me</button> -->
+   <button onclick="sayHI()">alert</button>
+   
+<p>Click the button to display a confirm box.</p>
+<button onclick="sayHI()">confirm</button>
+
+<p>Click the button to demonstrate the prompt box.</p>
+<button onclick="myFunction()">prompt</button>
+
+<script>
+    let Student = {
+        name: 'Lois Mandela',
+        age: 24,
+        course: 'Computer Science',
+    }
+     document.getElementById("demo").innerHTML= Student.name + 
+    ' of the age ' + Student.age + ' studies ' + Student.course;
+
+    //js methods are actions that can be performed on objects
+      function sayHI(){
+       //alert("Hello!");
+       alert("Hello! I am an alert box!");
+
+       confirm("Press a button!");
+     }
+ 
+Student.message = sayHI;
+    //document.getElementById("demo").innerHTML = 'Hi ' + Student.name;
+    document.getElementById("click me").onclick = Student.message;
+
+
+    function myFunction() {
+  let person = prompt("Please enter your name", "Harry Potter");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+  }
+}
+</script>
+
+
+<script>
+var car = {
+  model: 'BMW 320d',
+  color: 'Navy Blue',
+  fuel_type: 'Diesel',
+  get fuel(){
+    return this.fuel_type
+  }
+}
+document.getElementById("demo").innerHTML = car.fuel;
+</script>
+
+<script>
+var car = {
+  model: 'Audi A4',
+  color: 'Bright Red',
+  fuel_type: '',
+  set fuel(fuel){
+    this.fuel_type = fuel;
+  }
+}
+car.fuel = 'Petrol'
+document.getElementById("demo").innerHTML = car.fuel_type;
+   </script>
+</body>
+</html>
