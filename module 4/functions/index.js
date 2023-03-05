@@ -115,3 +115,42 @@ console.log(multBy2);
 //     return result
 // })
 // console.log(multBy2)
+
+function doSomething(){
+    console.log('I am a function')
+}
+doSomething();
+
+
+function square(number){
+   // return number * number
+    console.log(number * number); 
+}
+square(8)
+
+
+
+function square(number){
+    return number * number
+}
+console.log(square(78));
+console.log(square(96));
+console.log(square(52));
+console.log(square(37));
+
+
+function greeting(name){
+console.log('Good morning ' + name)
+}
+greeting('Peninah')
+
+function greeting(name){
+    return 'sun is shining and so are you ' + name
+    }
+    console.log(greeting('Nicole'));
+    console.log(greeting('Prudence'));
+    console.log(greeting('Jemimah'));
+    console.log(greeting('Janice'));
+    console.log(greeting('Matilda'));
+    
+

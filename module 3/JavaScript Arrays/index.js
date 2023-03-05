@@ -122,12 +122,12 @@ console.log(allCars);
 let ferariIndex = allCars.indexOf('Ferari');
 console.log(ferariIndex); //present
 
-let fitzIndex = allCars.indexOf('Fitz');
-console.log(fitzIndex); // not present teturns -1
+let vitzIndex = allCars.indexOf('Vitz');
+console.log(vitzIndex); // not present teturns -1
 
 //add fitz to list of cars if not present
-if(fitzIndex === -1){
-    allCars.push('Fitz');
+if(vitzIndex === -1){
+    allCars.push('Vitz');
 }
 // if(ferariIndex === -1){
 //     allCars.push('Ferari');
@@ -140,22 +140,23 @@ console.log(allCars);
 
 // 2.using includes()
 
-// if(!allCars.includes('Fitz')){
-//     allCars.push('Fitz');
+// if(!allCars.includes('Vitz')){
+//     allCars.push('Vitz');
 // }
 
-let isFitzPresent = allCars.includes('Fitz')//true
-console.log( 'use of includes ' + isFitzPresent);
+let isVitzPresent = allCars.includes('Vitz')//true
+console.log( 'use of includes ' + isVitzPresent);
 
 if(isFitzPresent){
-    console.log('Fitz is already present');
+    console.log('Vitz is already present');
 }
 else{
-    allCars.push('Fitz');
+    allCars.push('Vitz');
 }
 console.log(allCars);
 
 //values can be same but references are different
+
 let a = {value: 1};//0.24468851231573363
 let b = {value: 1};//0.3498217289526573
 console.log(a == b); //false
@@ -165,6 +166,7 @@ console.log(Math.random());
 let firstName = {value: 'Tunde'};
 let secondName = firstName;//reference to value
 console.log(secondName);
+
 
  let arrayOfCarsObjects = [
     {car: 'Nissan'},

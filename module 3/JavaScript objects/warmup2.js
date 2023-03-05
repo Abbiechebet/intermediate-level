@@ -115,7 +115,7 @@ stringSplosion('ab') → aab
 function stringSplosion(str){
   let result = '';
  for (let x = 0; x < str.length; x++) {
-  results = result + str.substring(0, x + 1);
+  let results = result + str.substring(0, x + 1);
  }
  return result;
 }
