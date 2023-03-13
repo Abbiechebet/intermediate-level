@@ -147,7 +147,7 @@ console.log(allCars);
 let isVitzPresent = allCars.includes('Vitz')//true
 console.log( 'use of includes ' + isVitzPresent);
 
-if(isFitzPresent){
+if(isVitzPresent){
     console.log('Vitz is already present');
 }
 else{
