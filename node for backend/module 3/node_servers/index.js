@@ -24,10 +24,8 @@ const http = require ('http')
 
 
 http.createServer(function(req,res){
-    res.write('Hello World'); //write a reponse to the client
+    res.write('Hello Stutern World'); //write a reponse to the client
     res.end(); //end the response
 }).listen(8080);//the serverobjectlistens on port 8080
 
 //facebook.com / 124.43.56.87
-
-
