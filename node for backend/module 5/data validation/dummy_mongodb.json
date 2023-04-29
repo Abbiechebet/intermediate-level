@@ -1,0 +1,58 @@
+[
+    { 
+        "id": 0,
+        "name": "Liz", 
+        "sex": "female",
+        "age": 46,
+        "password": "password1"
+    },
+    { 
+        "id": 1, 
+        "name": "Gerald", 
+        "sex": "male",
+        "age": 46,
+        "password": "password1",
+        "children": [
+        {
+            "id": 0,
+            "name": "Steph", 
+            "sex": "female",
+            "age": 12,
+            "password": "password1",
+            "levelOfStudy": "Junior secondary"
+        },
+        {
+            "id": 0,
+            "name": "Mike", 
+            "sex": "male",
+            "age": 16,
+            "password": "password1",
+            "levelOfStudy": "high school"
+        }
+        ]  
+    },
+    { 
+        "id": 2, 
+        "name": "Stephanie", 
+        "sex": "female",
+        "age": 46,
+        "password": "password1",
+        "placeOfOrigin": "Seattle" 
+    },
+    { 
+        "id": 3, 
+        "name": "Abigael", 
+        "sex": "female",
+        "age": 46,
+        "password": "password1" ,
+        "proffession":"engineer"  
+    },
+    {
+        "id": 1, 
+        "name": "Benita", 
+        "sex": "female",
+        "age": 46,
+        "password": "password1",
+        "experience": "2 years"
+    }
+  ]
