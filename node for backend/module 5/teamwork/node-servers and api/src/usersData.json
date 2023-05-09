@@ -1,0 +1,7 @@
+[
+  { "id": 0, "name": "Liz", "sex": "female" },
+  { "id": 1, "name": "Gerald", "sex": "male" },
+  { "id": 2, "name": "Stephanie", "sex": "female" },
+  { "id": 3, "name": "Abigael", "sex": "female" },
+  {"id": 1, "name": "Benita", "sex": "female"}
+]
