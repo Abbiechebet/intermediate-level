@@ -141,3 +141,8 @@ console.log(camry2007.displayCurrentDistance());
 console.log(rav42022.displayCurrentDistance());
 
 
+console.log(globalThis === globalThis.globalThis); // true (everywhere)
+console.log(global === global.global); // true (in Node.js)
+console.log(window === window.window); // true (in a browser)
+console.log(self === self.self); // true (in a browser or a Web Worker)
+console.log(frames === frames.frames); // true (in a browser)

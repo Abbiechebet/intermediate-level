@@ -31,7 +31,11 @@ fs.readFile('.//docs//message.pdf', {encoding:"utf-8"}, (err, data)=> {
     console.log(data);
 });
 
-//libuv c++
+/**
+ * libuv c++
+ 
+ * 
+ */
 console.log('App running');
 
 process.on('message', (codeObj) => {
@@ -40,11 +44,13 @@ process.on('message', (codeObj) => {
 });
 
 process.on('exit', (code) => {
-    console.log('exit event with code:' ,{code});
+    console.log(`exit event with code: ${code}`);
 });
 
-process.emit('message' ,{code:90});
+process.emit('message', {code:90});
 process.exit(1);
+
+//working directory/ current directory is when node is initialized
 
 
 //console.log(numberValidator(1001), "THE RETURNED OBJECT")
@@ -82,4 +88,3 @@ process.exit(1);
 // }
 // const{name, age, sex } = obj;
 // console.log(name, age, sex)
-

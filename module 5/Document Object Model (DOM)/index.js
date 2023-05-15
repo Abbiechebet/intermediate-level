@@ -53,3 +53,21 @@ helloElement.style.color = 'yellow';
 helloElement.style.backgroundColor = 'indigo';
 //square bracket notation - we use hyphen
 //helloElement.style["background-color"] = 'pink';
+
+
+
+
+
+//create a simple todo list that has the following functionalities
+/**
+ * add new item to the todo list
+ * edit an item in the todo list
+ * remove an item in the todo list
+
+some further requirements:
+      -the input field must be reset when the add button is clicked
+      -must show the most recent first
+      -*if the to do item exist it should not be added to the list
+ */
+      //for loop
+      //array methods (splice or slice)

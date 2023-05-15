@@ -26,5 +26,8 @@ Synchronous is a blocking architecture, so the execution of each operation
 is dependent on the completion of the one before it
 
 javascript is single threaded
-node js is multithreaded with the help of event loop and v8 engine
+node js is multithreaded with the help of event loop and v8 engine5
+
+Nodejs handles asynchronous operations with the help of event loop
+
  */

@@ -40,8 +40,8 @@ module.exports = {
         status: "failed",
         message: "Please pass in a user name",
       });
-
-    const user = users.find(
+      
+      const user = users.find(
       (user) => user.name.toLowerCase() == name.toLowerCase()
     );
 

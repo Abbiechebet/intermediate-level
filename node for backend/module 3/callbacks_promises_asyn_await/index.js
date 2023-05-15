@@ -3,10 +3,10 @@ const fs = require("fs");
 const axios = require("axios");
 //const { resolveCaa } = require('dns')
 
-//fs.readFileSync(".\\docs\\newfile.txt")
-//is high level thus a blocking code
+// fs.readFileSync(".\\docs\\newfile.txt")
+// //is high level thus a blocking code
 
-//fs.readFileSync(".\\docs\\newfile.json")
+// fs.readFileSync(".\\docs\\newfile.json")
 
 // fs.writefile(".\\docs\\newfile.txt", "Hello Backend", (err, data) => {
 //   if (err) console.log(err);
@@ -98,20 +98,25 @@ const newObj = {
 
 
 
-// //asyncfun ---synthetic sugar
-// const asyncFun = async function (arg) {
-//     try {
-//         const data = await fs.readFileSync(arg, 'utf-8');
-//         //const response = await fetch()
-//         console.log(data, "DOG BREED");
-//         const response = await axios.get(`https://dog.ceo/api/breed/${data.toLowerCase()}/images/random`);
-//         console.log(response.data)
-//         fs.writeFile(`.\\docs\\dogImage.json`,JSON.stringify( {
-//             [data]: response.data.message}), (err) => console.log(err))
-//         console.log('DONE')
-//     } catch (err) { throw err }
-// }
-// asyncFun('.\\docs\\newfile.txt')
+
+
+//asyncfun ---synthetic sugar
+const asyncFun = async function (arg) {
+    try {
+        const data = await fs.readFileSync(arg, 'utf-8');
+        //const response = await fetch()
+        console.log(data, "DOG BREED");
+        const response = await axios.get(`https://dog.ceo/api/breed
+        /${data.toLowerCase()}/images/random`);
+        console.log(response.data)
+        fs.writeFile(`./docs/dogImage.json`,JSON.stringify( {
+            [data]: response.data.message}), (err) => console.log(err))
+        console.log('DONE')
+    } catch (err) { throw err }
+}
+asyncFun('./docs/newfile.txt')
+
+
 
 
 
@@ -147,5 +152,5 @@ readFilePro('./docs/newfile.txt', "utf-8")
     console.log(err)
   })
 
-//costructor fnction returns an object
+//costructor function returns an object
 //I can manipulate data from the logger function
