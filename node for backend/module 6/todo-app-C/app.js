@@ -1,8 +1,9 @@
 import express from "express";
-import dotenv from "dotenv";
+//import dotenv from "dotenv";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import { globalErrorHandler } from "./src/utils/errorHandler.js";
+import { config } from "./src/config/index.js";
 
 // Importing the User Routes
 import { router as userRouter } from "./src/router/user.route.js";
@@ -15,16 +16,22 @@ import { router as taskRouter } from "./src/router/task.route.js";
 const app = express();
 
 // Exposing environment variables
-dotenv.config();
+//dotenv.config();
 
 // Database connection
+// mongoose
+//   .connect(process.env.MONGODB_CONNECTION_URL)
+//   .then(() => console.log("Database connection established"))
+//   .catch((e) => console.log(e.message));
+
 mongoose
-  .connect(process.env.MONGODB_CONNECTION_URL)
+  .connect(config.mongodb_connection_url)
   .then(() => console.log("Database connection established"))
-  .catch((e) => console.log(e.message));
+  .catch((e) => console.log("Mongo connection error: ", e.message));
 
 // Port configuration
-const port = Number(process.env.PORT) || 3000;
+//const port = Number(process.env.PORT) || 3000;
+const port = config.port || 3000;
 
 // Middlewares
 app.use(morgan("tiny"));
@@ -40,8 +47,6 @@ app.use(globalErrorHandler);
 app.listen(port, () => {
   console.log(`Server runnning on port: ${port}`);
 });
-
-
 
 /*
   { id: 18, name: 'Drama' },

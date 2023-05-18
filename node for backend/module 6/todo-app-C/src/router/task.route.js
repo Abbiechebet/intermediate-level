@@ -13,6 +13,6 @@ router.get("/one", userAuthMiddleWare, tryCatchHandler( TaskController.getOneTas
 
 router.get("/all_task", userAuthMiddleWare, tryCatchHandler( TaskController.findAll))
 
-router.delete("/delete", userAuthMiddleWare, tryCatchHandler( TaskController.deleteOneTask))
+router.delete("/delete",  userAuthMiddleWare, tryCatchHandler( TaskController.deleteOneTask))
 
 export {router}
