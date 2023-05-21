@@ -24,6 +24,7 @@ const app = express();
 //   .then(() => console.log("Database connection established"))
 //   .catch((e) => console.log(e.message));
 
+//console.log(config.mongodb_connection_url)
 mongoose
   .connect(config.mongodb_connection_url)
   .then(() => console.log("Database connection established"))
@@ -37,6 +38,7 @@ const port = config.port || 3000;
 app.use(morgan("tiny"));
 app.use(express.json());
 
+
 // Routes
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/task", taskRouter);
@@ -47,6 +49,7 @@ app.use(globalErrorHandler);
 app.listen(port, () => {
   console.log(`Server runnning on port: ${port}`);
 });
+
 
 /*
   { id: 18, name: 'Drama' },

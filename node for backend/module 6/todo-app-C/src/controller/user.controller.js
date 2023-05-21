@@ -13,10 +13,10 @@ export default class UserController {
     // Joi validation
     const { error, value } = createUserValidator.validate(req.body)
     if (error) throw error
-    const emailExists = await User.find({ email: req.body.email })
-    if (emailExists.length > 0) throw new BadUserRequestError("An account with this email already exists.")
-    const usernameExists = await User.find({ username: req.body.username })
-    if (usernameExists.length > 0) throw new BadUserRequestError("An account with this username already exists.")
+    // const emailExists = await User.find({ email: req.body.email })
+    // if (emailExists.length > 0) throw new BadUserRequestError("An account with this email already exists.")
+    // const usernameExists = await User.find({ username: req.body.username })
+    // if (usernameExists.length > 0) throw new BadUserRequestError("An account with this username already exists.")
     const saltRounds = config.bycrypt_salt_round
     const hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
     const user = {

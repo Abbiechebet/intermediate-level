@@ -11,6 +11,7 @@ if(!environment) throw new Error("No environment setup on the SERVER!!!")
 console.log(`Server setup to ${environment}!!!`)
 
 if(environment.trim() === "production") {
+  //console.log(production)
   config = {...production}
 }
 if(environment.trim() === "development") {
