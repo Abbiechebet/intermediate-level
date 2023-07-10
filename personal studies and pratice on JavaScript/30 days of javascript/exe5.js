@@ -1,3 +1,7 @@
+/**
+ * Arrays
+ */
+
 //Exercise: Level 1
 //Declare an empty array;
 let emptyArray = [];

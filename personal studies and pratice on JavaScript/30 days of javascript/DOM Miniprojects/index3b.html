@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:23 Day: Keyboard Key </title>
+</head>
+
+<body>
+	<body>
+		 <script>
+		const currentDiv = document.querySelector("body");
+		const newDiv = document.createElement("div");
+		newDiv.style =`margin:auto; width:40%; margin-top:200px;`
+		//background-color:#98fb98;
+		currentDiv.appendChild(newDiv);
+
+			  const keyPressedElement = document.createElement('input');
+			  keyPressedElement.style = `padding:20px; font-size:40px;
+			  text-align:center; margin-left:50px; width:80%; margin-bottom:30px;
+			  color:green; text-shadow: 1px 1px 2px black;
+			  box-shadow: 0px 0px 10px 5px grey; border-radius:5px;`
+              newDiv.appendChild(keyPressedElement);
+			  keyPressedElement.placeholder = 'Press any keyboard key';
+
+			  const keyCodeElement = document.createElement('div');
+			  keyCodeElement.style = `justify-content: center; 
+			  align-items: center; padding:30px; font-size:65px;
+			  font-weight:bold; color:black; width:75px; color:green;
+			  height:90px; margin: 0 auto; text-shadow: 1px 1px 2px black;
+			  box-shadow: 0px 0px 10px 5px grey;  border-radius:5px;`
+	
+			  newDiv.appendChild(keyCodeElement)
+			  // Add event listener for keydown event
+			  document.addEventListener("keydown", function(event) {
+				const keyPressed = event.key;
+				const keyCode = event.keyCode || event.which;
+				const string = 'You Pressed ';
+			
+				// Update the textContent of the elements
+				keyPressedElement.value =string + keyPressed;
+				//keyPressedElement.textContent = 'You Pressed ' + keyPressed;
+				keyCodeElement.textContent = keyCode;
+			  })
+	</script>
+ <!-- <script src="./index3b.js"></script>   -->
+
+</body>
+
+</html>

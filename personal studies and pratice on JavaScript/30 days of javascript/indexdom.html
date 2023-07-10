@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM) - Day 1</title>
+</head>
+<body>
+    <!-- <ul>
+        <li>30DaysOfPython Challenge Done</li>
+        <li>30DaysOfJavaScript Challenge Done</li>
+        <li>30DaysOfReact Challenge Coming</li>
+        <li>30DaysOfFullStack Challenge Coming</li>
+        <li>30DaysOfDataAnalysis Challenge Coming</li>
+        <li>30DaysOfReactNative Challenge Coming</li>
+        <li>30DaysOfMachineLearning Challenge Coming</li>
+    </ul>
+    <h1 class='title' id='first-title'>First Title</h1>
+    <h1 class='title' id='second-title'>Second Title</h1>
+    <h1 class='title' id='third-title'>Third Title</h1>
+    <h1></h1>
+
+    <p class='para' id='first-para'>First Paragraph</p>
+    <p class='para' id='second-para'>First Paragraph</p>
+    <p class='para' id='third-para'>First Paragraph</p>
+    <p></p>
+
+    <script>
+        let title
+        for (let i = 0; i < 3; i++) {
+            title = document.createElement('h1')
+            title.className = 'title'
+            title.style.fontSize = '24px'
+            title.textContent = i
+            document.body.appendChild(title)
+            console.log(title)
+        }
+
+       /* const ul = document.querySelector('ul')
+        const lists = document.querySelectorAll('li')
+        for (const list of lists) {
+            ul.removeChild(list)
+
+        }
+
+        const ul = document.querySelector('ul')
+        ul.innerHTML = ''
+        */ -->
+
+
+
+
+<!-- DOM(Document Object Model)-Day 3 -->
+<!-- The following is an example of click type event.
+Example: click -->
+    <!-- <h1>Body Mass Index Calculator</h1>
+
+    <input type="text" id="mass" placeholder="Mass in Kilogram" />
+    <input type="text" id="height" placeholder="Height in meters" />
+    <button>Calculate BMI</button>
+
+    <script>
+      const mass = document.querySelector('#mass')
+      const button = document.querySelector('button')
+
+      let bmi
+      button.addEventListener('click', () => {
+        bmi = mass.value / height.value ** 2
+        alert(`your bmi is ${bmi.toFixed(2)}`)
+        console.log(bmi)
+      }) -->
+
+
+
+
+      <!-- <h1>Data Binding using input or change event</h1>
+
+      <input type="text" placeholder="say something" />
+      <p></p>
+  
+      <script>
+        const input = document.querySelector('input')
+        const p = document.querySelector('p')
+  
+        input.addEventListener('input', e => {
+          p.textContent = e.target.value
+        })
+      </script>
+
+     </script> -->
+
+
+
+
+     <!-- <h1>Giving feedback using blur event</h1>
+
+     <input type="text" id="mass" placeholder="say something" />
+     <p></p>
+ 
+     <script>
+         const input = document.querySelector('input')
+         const p = document.querySelector('p')
+ 
+         input.addEventListener('blur', (e) => {
+             p.textContent = 'Field is required'
+             p.style.color = 'red'
+ 
+         })
+     </script> -->
+
+
+
+
+     <!-- keypress, keydow and keyup -->
+     <h1>Key events: Press any key</h1>
+
+     <script>
+       document.body.addEventListener('keypress', e => {
+         alert(e.keyCode)
+       })
+     </script>
+
+
+    <script src="./exe21.js"></script>
+    <script src="./exe22.js"></script> 
+</body>
+</html>

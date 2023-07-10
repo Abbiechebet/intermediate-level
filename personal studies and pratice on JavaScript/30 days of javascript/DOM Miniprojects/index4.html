@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solar System: Document Object Model:30 Days Of JavaScript</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+		<h1>Calculate a weight of an object on a planet</h1>
+
+		<input type="text" id="mass" required placeholder="Mass in Kilogram" />
+		<select>
+			<option value='none'>--select planet-- </option>
+      <option value="Mercury">MERCURY</option>
+      <option value="Venus">VENUS</option>
+      <option value="Earth">EARTH</option>
+      <option value="Moon">MOON</option>
+      <option value="Mars">MARS</option>
+      <option value="Jupiter">JUPITER</option>
+      <option value="Saturn">SATURN</option>
+      <option value="Uranus">URANUS</option>
+      <option value="Neptune">NEPTUNE</option>
+      <option value="Pluto">PLUTO</option>
+		</select>
+     <button type="button" onclick="calculateWeight()">Calculate weight</button> 
+
+	</header>
+	<main>
+		<div class="flex-container">
+			<div class="flex-item image"> 
+			</div> 
+			<div class="flex-item description">
+
+			</div>
+
+		</div>
+
+
+	</main>
+
+	<script src="./index4.js"></script>
+  
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Weight Calculator</title>
+  <style>
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weight Calculator</h1>
+
+  <form id="weightCalculator">
+    <label for="mass">Mass (kg):</label>
+    <input type="number" id="mass" required>
+    
+    <label for="planet">Choose a planet/moon:</label>
+    <select id="planet">
+      <option value='none'>--select planet-- </option>
+      <option value="Mercury">MERCURY</option>
+      <option value="Venus">VENUS</option>
+      <option value="Earth">EARTH</option>
+      <option value="Moon">MOON</option>
+      <option value="Mars">MARS</option>
+      <option value="Jupiter">JUPITER</option>
+      <option value="Saturn">SATURN</option>
+      <option value="Uranus">URANUS</option>
+      <option value="Neptune">NEPTUNE</option>
+      <option value="Pluto">PLUTO</option>
+    </select>
+
+  <button type="button" onclick="calculateWeight()">Calculate Weight</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+    function calculateWeight() {
+      var massInput = document.getElementById("mass");
+      var planetSelect = document.getElementById("planet");
+      var outputDiv = document.getElementById("output");
+      
+      if (massInput.value === "") {
+        outputDiv.textContent = "Mass is required.";
+        return;
+      }
+      
+      var mass = parseFloat(massInput.value);
+      var planet = planetSelect.value;
+      var weight;
+      var image;
+      switch (planet) {
+    case "Mercury":
+      weight = mass * 0.38;
+      image = "mercury.png";
+      break;
+    case "Venus":
+      weight = mass * 0.91;
+      image = "venus.png";
+      break;
+    case "Earth":
+      weight = mass;
+      image = "earth.png";
+      break;
+    case "Moon":
+      weight = mass * 0.165;
+      image = "moon.png";
+      break;
+    case "Mars":
+      weight = mass * 0.38;
+      image = "mars.png";
+      break;
+    case "Jupiter":
+      weight = mass * 2.34;
+      image = "jupiter.png";
+      break;
+    case "Saturn":
+      weight = mass * 1.06;
+      image = "saturn.png";
+      break;
+    case "Uranus":
+      weight = mass * 0.92;
+      image = "uranus.png";
+      break;
+    case "Neptune":
+      weight = mass * 1.19;
+      image = "neptune.png";
+      break;
+    case "Pluto":
+      weight = mass * 0.063;
+      image = "pluto.png";
+      break;
+    default:
+      weight = 0;
+      image = "";
+  }
+      outputDiv.innerHTML = "Weight: " + weight.toFixed(2) + " kg<br>";
+      outputDiv.innerHTML += "<img src='./solar images/" + image + "' alt='" + planet + "'>";
+    }
+  </script>
+</body>
+</html>  
+
+  -->
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Solar System: Document Object Model:30 Days Of JavaScript</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>Calculate a weight of an object on a planet</h1>
+
+		<input type="text" id="mass" placeholder="Mass in Kilogram" />
+		<select>
+			<option value='none'>--select planet-- </option>
+      <option value="Mercury">MERCURY</option>
+      <option value="Venus">VENUS</option>
+      <option value="Earth">EARTH</option>
+      <option value="Moon">MOON</option>
+      <option value="Mars">MARS</option>
+      <option value="Jupiter">JUPITER</option>
+      <option value="Saturn">SATURN</option>
+      <option value="Uranus">URANUS</option>
+      <option value="Neptune">NEPTUNE</option>
+      <option value="Pluto">PLUTO</option>
+		</select>
+     <button type="button" onclick="calculateWeight()">Calculate weight</button> 
+  <button type="button">Calculate weight</button> 
+
+	</header>
+	<main>
+		<div class="flex-container">
+			<div class="flex-item image">
+			<img src='./solar images/mercury.png' class="planet-image" /> 
+			  <img src='./solar images/venus.png' class="planet-image" />
+				<img src='./solar images/earth.png' class="planet-image" />
+				<img src='./solar images/moon.png' class="planet-image" />
+				<img src='./solar images/mars.png' class="planet-image" />
+				<img src='./solar images/jupiter.png' class="planet-image" />
+				<img src='./solar images/saturn.png' class="planet-image" />
+				<img src='./solar images/uranus.png' class="planet-image" />
+				<img src='./solar images/neptune.png' class="planet-image" />
+				<img src='./solar images/pluto.png' class="planet-image" />   
+			</div> 
+			<div class="flex-item description">
+
+			</div>
+
+		</div>
+
+
+	</main>
+
+	<script src="./index4.js"></script>
+</body>
+
+</html>  -->
