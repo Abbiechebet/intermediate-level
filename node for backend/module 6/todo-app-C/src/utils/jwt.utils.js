@@ -11,6 +11,7 @@ export function generateToken(user){
   return token 
 }
 
+
 export function verifyToken(token){
  return jwt,verify(token, config.jwt_secret_key)
 }

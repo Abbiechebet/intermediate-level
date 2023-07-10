@@ -17,5 +17,4 @@ if(environment.trim() === "production") {
 if(environment.trim() === "development") {
   config = {...development}
 }
-
 export { config }

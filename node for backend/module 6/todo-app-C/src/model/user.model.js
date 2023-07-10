@@ -25,6 +25,10 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
+
+  resetToken: String,
+  expireToken: String,
+
   firstName: String,
   lastName: String,
   fullName: String,
