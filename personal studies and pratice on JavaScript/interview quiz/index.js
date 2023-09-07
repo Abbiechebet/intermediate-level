@@ -45,3 +45,43 @@ console.log(factorial(2));
 console.log(factorial(3)); 
 console.log(factorial(4)); 
 console.log(factorial(5)); 
+
+
+
+
+
+function findLongestWord(words) {
+    let longestWord = "";
+
+    for (let word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    }
+    return longestWord;
+}
+// Test
+const wordsArray = ["apple", "banana", "strawberry", "grape"];
+const wordsArray1 = ["apple", "banana", "pawpaw", "grape"];
+console.log(findLongestWord(wordsArray)); 
+console.log(findLongestWord(wordsArray1)); 
+
+
+
+
+
+function findShortestWord(arr) {
+    if (!arr || arr.length === 0) return null;
+    let shortest = arr[0];
+    for (let word of arr) {
+        if (word.length < shortest.length) {
+            shortest = word;
+        }
+    }
+    return shortest;
+}
+// Test
+const words = ["apple", "banana", "kiwi", "grape", "mango"];
+const words1 = ["passionfruit", "watermelon", "pineapple", "grapevine", "tangerine"];
+console.log(findShortestWord(words));  // Outputs: "kiwi"
+console.log(findShortestWord(words1));
